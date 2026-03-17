@@ -145,7 +145,7 @@ Processes instant payouts through UPI or payment gateways.
 
 # AI Integration
 
-The platform uses AI to automate risk analysis, premium calculation, and fraud detection.
+The platform uses AI to automate risk analysis, premium calculation, and fraud detection. <br>
 **Risk Scoring** <br>
 AI analyzes weather patterns, pollution levels, and disruption history to calculate a risk score for delivery zones. <br>
 **Dynamic Premium Calculation** <br>
