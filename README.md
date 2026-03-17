@@ -20,7 +20,7 @@ Insights were gathered from discussions with gig workers to understand the key p
 
 ![alt text](images/insights.png)
 
-Worker Quotes:
+Worker Quotes: <br>
 When it rains heavily, I cannot work and my earnings drop.  <br>
 If there was simple insurance protecting weekly income, I would use it.  <br>
 Insurance should be simple and automatic for gig workers.  <br>
@@ -102,13 +102,6 @@ processes payouts when predefined trigger conditions are satisfied. <br>
 
 ![alt text](images/parametricTriggersWorking.jpeg)
 
-## Possible Fraud Scenarios
-Certain actions by delivery workers may attempt to misuse the automated payout mechanism. <br>
-• GPS spoofing to falsely appear within affected zones <br>
-• Claiming income loss while being offline on the platform <br>
-• Submitting duplicate claims for the same disruption event <br>
-• Reporting false disruption conditions <br>
-• Moving between zones to exploit trigger conditions 
 
 ## Fraud Prevention and Detection Mechanisms
 The platform incorporates multiple verification layers to detect and prevent fraudulent 
@@ -129,124 +122,118 @@ Parametric triggers improve efficiency, transparency, and reliability in the ins
 • Clear and transparent trigger conditions <br>
 • Scalable coverage for large numbers of delivery workers
 
-## Future Improvements
-Future enhancements can further strengthen the platform. <br>
-• Advanced AI models for predicting disruptions <br>
-• Integration of additional real-time data sources <br>
-• Behavior-based risk scoring for workers <br>
-• Mobile application with multilingual support
-
 ## Insurance Architecture
 
 ![alt text](images/InsuranceArchitecture.jpeg)
 
 # System Architecture
-The platform follows a mobile-first architecture for automated insurance coverage and payouts.
-## Mobile App
-Allows delivery workers to register, view coverage, track premiums, and receive payout notifications.
-## Backend Server
-Handles authentication, policy management, premium calculation, and claim processing.
-## AI Engine
-Analyzes environmental data and worker activity to calculate risk scores and detect fraud.
-## External APIs
-Weather, air quality, and GPS data are used to monitor disruptions and validate worker location.
-## Payment System
-Processes instant payouts through UPI or payment gateways.
 
 ![alt text](images/SystemArchitecture.png)
+
+**Web Application**
+Allows delivery workers to register, view coverage, track premiums, and receive payout notifications.
+**Backend Server**
+Handles authentication, policy management, premium calculation, and claim processing.
+**AI Engine**
+Analyzes environmental data and worker activity to calculate risk scores and detect fraud.
+**External APIs**
+Weather, air quality, and GPS data are used to monitor disruptions and validate worker location.
+**Payment System**
+Processes instant payouts through UPI or payment gateways.
 
 # AI Integration
 
 The platform uses AI to automate risk analysis, premium calculation, and fraud detection.
-## Risk Scoring
+**Risk Scoring**
 AI analyzes weather patterns, pollution levels, and disruption history to calculate a risk score for delivery zones.
-## Dynamic Premium Calculation
+**Dynamic Premium Calculation**
 The system determines a weekly premium based on the risk score and worker activity.
-## Disruption Monitoring
+**Disruption Monitoring**
 Real-time environmental data such as rainfall, temperature, and AQI is monitored to detect delivery disruptions.
-## Fraud Detection
+**Fraud Detection**
 AI identifies suspicious activities like GPS spoofing, duplicate claims, or inactive workers requesting payouts.
-## Automated Claim Trigger
+**Automated Claim Trigger**
 When a disruption threshold is reached and the worker is eligible, the claim is automatically triggered.
 
 # Financial Model & Sustainability
 ## 1. Assumptions
-Average deliveries per rider per day: 20
-Working days per week: 7
+Average deliveries per rider per day: 20 <br>
+Working days per week: 7 <br>
 Insurance type: Parametric micro-insurance (event-triggered payouts)
 
 ## 2. Premium Contribution
-Low-Risk Zone (Basic Plan)
-Per delivery contribution: ₹0.50
-Weekly premium:
-₹0.50 × 20 × 7 = ₹70 per rider
+Low-Risk Zone (Basic Plan) <br>
+Per delivery contribution: ₹0.50 <br>
+Weekly premium: <br>
+₹0.50 × 20 × 7 = ₹70 per rider <br>
 
-High-Risk Zone (Essential Plan)
+High-Risk Zone (Essential Plan) <br>
 Per delivery contribution: ₹0.60
 
-Weekly premium:
+Weekly premium: <br>
 ₹0.60 × 20 × 7 = ₹84 per rider
 
 ## 3. Risk Pool Example
-100 Low-Risk Riders (Basic)
+100 Low-Risk Riders (Basic) <br>
 → 100 × ₹70 = ₹7,000
 
-50 High-Risk Riders (Essential)
+50 High-Risk Riders (Essential) <br>
 → 50 × ₹84 = ₹4,200
 
 ## 4. Total Weekly Pool
 Total Premium Collected = ₹11,200
 
 ## 5. Payout Structure
-Low-Risk (Basic Plan)
-Max coverage per event: ₹400
-Max weekly payout per rider: ₹800
-Expected disruptions: 0–1 per week
-High-Risk (Essential Plan)
-Max coverage per event: ₹350
-Max weekly payout per rider: ₹800
-Expected disruptions: 1–2 per week
+Low-Risk (Basic Plan) <br>
+Max coverage per event: ₹400 <br>
+Max weekly payout per rider: ₹800 <br>
+Expected disruptions: 0–1 per week 
+
+High-Risk (Essential Plan) <br>
+Max coverage per event: ₹350 <br>
+Max weekly payout per rider: ₹800 <br>
+Expected disruptions: 1–2 per week <br>
 
 ## 6. Example Weekly Payout Scenario
-10 affected low-risk riders
+10 affected low-risk riders <br>
 → 10 × ₹400 = ₹4,000
 
-5 affected high-risk riders
+5 affected high-risk riders <br>
 → 5 × ₹350 = ₹1,750
 
 ## 7. Total Payout
 Total Payout = ₹5,750
 
 ## 8. Financial Balance
-Total Premium Collected: ₹11,200
-Total Payout: ₹5,750
+Total Premium Collected: ₹11,200 <br>
+Total Payout: ₹5,750 <br>
 Remaining Buffer = ₹5,450
 
 ## 9. Sustainability Mechanism
-The system maintains financial stability through:
-Pooled-risk model across all riders
-Lower payout per event in high-risk zones to offset higher frequency
-Parametric triggers to eliminate manual claims and reduce fraud
+The system maintains financial stability through: <br>
+Pooled-risk model across all riders <br>
+Lower payout per event in high-risk zones to offset higher frequency <br>
+Parametric triggers to eliminate manual claims and reduce fraud <br>
 Weekly payout caps to control excessive losses
 
 # Tech Stack
-## Mobile Application
- • 	Flutter
+## Web Application
+ • 	Flutter <br>
  •	Dart
 ## Backend
- •	Node.js / Express or Python (FastAPI / Flask)
+ •	Node.js / Express or Python (FastAPI / Flask) <br>
  • Cloud Platforms (AWS)
 ## AI / Machine Learning
- •	Python
- •	Scikit-learn
- •	Pandas
+ •	Python <br>
+ •	Scikit-learn <br>
+ •	Pandas <br>
  •	NumPy
 ## Database
  •	Firebase / MongoDB / PostgreSQL
 ## APIs and Integrations
- •	OpenWeatherMap API
- •	Air Quality API
- •	Google Maps API
+ •	OpenWeatherMap API <br>
+ •	Air Quality API <br>
+ •	Google Maps API <br>
  •	Payment Gateway APIs (Razorpay / Stripe sandbox)
 ## Security & Identity
  • KYC Verification (Blockchain-based identity systems)
