@@ -133,13 +133,13 @@ Parametric triggers improve efficiency, transparency, and reliability in the ins
 ![alt text](images/SystemArchitecture.png)
 
 **Web Application** <br>
-Allows delivery workers to register, view coverage, track premiums, and receive payout notifications.
+Allows delivery workers to register, view coverage, track premiums, and receive payout notifications. <br>
 **Backend Server** <br>
-Handles authentication, policy management, premium calculation, and claim processing.
+Handles authentication, policy management, premium calculation, and claim processing. <br>
 **AI Engine** <br>
-Analyzes environmental data and worker activity to calculate risk scores and detect fraud. 
+Analyzes environmental data and worker activity to calculate risk scores and detect fraud. <br>
 **External APIs** <br>
-Weather, air quality, and GPS data are used to monitor disruptions and validate worker location.
+Weather, air quality, and GPS data are used to monitor disruptions and validate worker location. <br>
 **Payment System** <br>
 Processes instant payouts through UPI or payment gateways.
 
@@ -147,13 +147,13 @@ Processes instant payouts through UPI or payment gateways.
 
 The platform uses AI to automate risk analysis, premium calculation, and fraud detection.
 **Risk Scoring** <br>
-AI analyzes weather patterns, pollution levels, and disruption history to calculate a risk score for delivery zones.
+AI analyzes weather patterns, pollution levels, and disruption history to calculate a risk score for delivery zones. <br>
 **Dynamic Premium Calculation** <br>
-The system determines a weekly premium based on the risk score and worker activity.
+The system determines a weekly premium based on the risk score and worker activity. <br>
 **Disruption Monitoring** <br>
-Real-time environmental data such as rainfall, temperature, and AQI is monitored to detect delivery disruptions.
+Real-time environmental data such as rainfall, temperature, and AQI is monitored to detect delivery disruptions. <br>
 **Fraud Detection** <br>
-AI identifies suspicious activities like GPS spoofing, duplicate claims, or inactive workers requesting payouts.
+AI identifies suspicious activities like GPS spoofing, duplicate claims, or inactive workers requesting payouts. <br>
 **Automated Claim Trigger** <br>
 When a disruption threshold is reached and the worker is eligible, the claim is automatically triggered.
 
