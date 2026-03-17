@@ -13,6 +13,7 @@ Visual Representation of the Problem: <br>
 To better understand the challenges faced by gig workers, we conducted informal interviews and discussions with delivery partners working on platforms such as Zomato, Swiggy, Amazon, and Zepto.
 The goal of these interviews was to learn about their daily work routines, income patterns, and the risks they face due to external disruptions such as weather conditions, pollution, or reduced delivery demand.
 From these conversations, we identified several common behavioral patterns, needs, and pain points among gig workers. Using these insights, we created three representative user personas that reflect the typical experiences of delivery partners in India’s gig economy. <br>
+
 ![alt text](images/persona.png)
 
 # Interview Insights
@@ -53,7 +54,8 @@ In high-risk zones, premiums follow a risk-adjusted structure to account for the
 # Parametric Triggers
 
 ## Introduction
-Parametric triggers are predefined conditions that automatically activate insurance payouts when a disruption occurs. Instead of relying on manual claim verification, payouts are determined using trusted external data sources such as weather conditions, pollution levels, or official government alerts. This approach enables faster, transparent, and efficient compensation for gig delivery workers affected by external disruptions.
+Parametric triggers are predefined conditions that automatically activate insurance payouts when a disruption occurs. Instead of relying on manual claim verification, payouts are determined using trusted external data sources such as weather conditions, pollution levels, or official government alerts. This approach enables faster, transparent, and efficient compensation for gig delivery workers affected by external disruptions. <br>
+
 ![alt text](images/TriggerFlow.jpeg)
 
 ## Purpose of Parametric Triggers in the Platform
@@ -130,29 +132,29 @@ Parametric triggers improve efficiency, transparency, and reliability in the ins
 
 ![alt text](images/SystemArchitecture.png)
 
-**Web Application**
+**Web Application** <br>
 Allows delivery workers to register, view coverage, track premiums, and receive payout notifications.
-**Backend Server**
+**Backend Server** <br>
 Handles authentication, policy management, premium calculation, and claim processing.
-**AI Engine**
-Analyzes environmental data and worker activity to calculate risk scores and detect fraud.
-**External APIs**
+**AI Engine** <br>
+Analyzes environmental data and worker activity to calculate risk scores and detect fraud. 
+**External APIs** <br>
 Weather, air quality, and GPS data are used to monitor disruptions and validate worker location.
-**Payment System**
+**Payment System** <br>
 Processes instant payouts through UPI or payment gateways.
 
 # AI Integration
 
 The platform uses AI to automate risk analysis, premium calculation, and fraud detection.
-**Risk Scoring**
+**Risk Scoring** <br>
 AI analyzes weather patterns, pollution levels, and disruption history to calculate a risk score for delivery zones.
-**Dynamic Premium Calculation**
+**Dynamic Premium Calculation** <br>
 The system determines a weekly premium based on the risk score and worker activity.
-**Disruption Monitoring**
+**Disruption Monitoring** <br>
 Real-time environmental data such as rainfall, temperature, and AQI is monitored to detect delivery disruptions.
-**Fraud Detection**
+**Fraud Detection** <br>
 AI identifies suspicious activities like GPS spoofing, duplicate claims, or inactive workers requesting payouts.
-**Automated Claim Trigger**
+**Automated Claim Trigger** <br>
 When a disruption threshold is reached and the worker is eligible, the claim is automatically triggered.
 
 # Financial Model & Sustainability
@@ -168,8 +170,7 @@ Weekly premium: <br>
 ₹0.50 × 20 × 7 = ₹70 per rider <br>
 
 High-Risk Zone (Essential Plan) <br>
-Per delivery contribution: ₹0.60
-
+Per delivery contribution: ₹0.60 <br>
 Weekly premium: <br>
 ₹0.60 × 20 × 7 = ₹84 per rider
 
@@ -211,10 +212,10 @@ Remaining Buffer = ₹5,450
 
 ## 9. Sustainability Mechanism
 The system maintains financial stability through: <br>
-Pooled-risk model across all riders <br>
-Lower payout per event in high-risk zones to offset higher frequency <br>
-Parametric triggers to eliminate manual claims and reduce fraud <br>
-Weekly payout caps to control excessive losses
+ • Pooled-risk model across all riders <br>
+ • Lower payout per event in high-risk zones to offset higher frequency <br>
+ • Parametric triggers to eliminate manual claims and reduce fraud <br>
+ • Weekly payout caps to control excessive losses
 
 # Tech Stack
 ## Web Application
