@@ -56,7 +56,7 @@ In high-risk zones, premiums follow a risk-adjusted structure to account for the
 ## Introduction
 Parametric triggers are predefined conditions that automatically activate insurance payouts when a disruption occurs. Instead of relying on manual claim verification, payouts are determined using trusted external data sources such as weather conditions, pollution levels, or official government alerts. This approach enables faster, transparent, and efficient compensation for gig delivery workers affected by external disruptions. <br>
 
-![alt text](images/TriggerFlow.jpeg)
+![alt text](images/TriggerFlow.png)
 
 ## Purpose of Parametric Triggers in the Platform
 The objective of the platform is to protect gig delivery workers from income loss caused by events such as extreme weather, pollution, curfews, or delivery platform disruptions. When a trigger threshold is reached and eligibility conditions are satisfied, the system 
@@ -86,7 +86,7 @@ pricing. <br>
 • Delivery platform downtime frequency <br>
 Based on these parameters, the AI model determines the risk score and dynamically adjusts the weekly premium amount.
 
-![alt text](images/RiskAnalysis1.jpeg)
+![alt text](images/RiskAnalysis.png)
 
 ## Parametric Trigger Examples
 Trigger thresholds are calibrated based on zone-level event frequency to balance responsiveness and financial sustainability. 
