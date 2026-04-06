@@ -61,61 +61,6 @@ export const sendOtp = async (req, res, next) => {
       });
     }
 
-<<<<<<< HEAD
-    // Generate a 6-digit OTP
-    const otp = String(Math.floor(100000 + Math.random() * 900000));
-
-    // Store OTP with 10-minute expiry
-    otpStore.set(normalizedPhone, {
-      otp,
-      timestamp: Date.now(),
-      expiresAt: Date.now() + 10 * 60 * 1000
-    });
-
-    const to = formatPhoneNumber(normalizedPhone);
-
-    const twilioClient = getTwilioClient();
-
-    let deliveryMode = 'sms';
-
-    if (!twilioClient) {
-      console.warn(`Twilio is not configured. OTP for ${normalizedPhone}: ${otp}`);
-      deliveryMode = 'fallback';
-    } else {
-      try {
-        await twilioClient.messages.create({
-          body: `Your Agesis AI verification code is ${otp}. It is valid for 10 minutes.`,
-          from: process.env.TWILIO_SENDER_NUMBER,
-          to
-        });
-        console.log(`✅ OTP sent to ${to}`);
-      } catch (twilioError) {
-        console.warn(`Twilio OTP delivery failed for ${to}: ${twilioError.message}`);
-        deliveryMode = 'fallback';
-      }
-    }
-
-    const canUseFallback = deliveryMode === 'fallback' && shouldExposeOtpFallback();
-
-    if (deliveryMode === 'fallback' && !canUseFallback) {
-      return res.status(500).json({
-        success: false,
-        message: 'OTP delivery failed. Please contact support.'
-      });
-    }
-
-    res.status(200).json({
-      success: true,
-      message: deliveryMode === 'sms'
-        ? `OTP sent to ${normalizedPhone}`
-        : `SMS provider unavailable. OTP fallback is enabled for local testing on ${normalizedPhone}`,
-      data: {
-        phone: normalizedPhone,
-        deliveryMode,
-        ...(canUseFallback && { otp })
-      }
-    });
-=======
     // Generate OTP
     const otp = String(Math.floor(100000 + Math.random() * 900000));
 
@@ -137,7 +82,6 @@ export const sendOtp = async (req, res, next) => {
       }
     });
 
->>>>>>> upstream/main
   } catch (error) {
     next(error);
   }
