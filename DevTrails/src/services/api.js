@@ -1,5 +1,8 @@
 const API_BASE = import.meta.env.VITE_API_BASE_URL || (import.meta.env.DEV ? 'http://localhost:5000' : '');
+<<<<<<< HEAD
 console.log("API_BASE:", API_BASE);
+=======
+>>>>>>> upstream/main
 
 const safeJson = async (response) => {
   const text = await response.text();

@@ -61,6 +61,7 @@ export const sendOtp = async (req, res, next) => {
       });
     }
 
+<<<<<<< HEAD
     // Generate a 6-digit OTP
     const otp = String(Math.floor(100000 + Math.random() * 900000));
 
@@ -114,6 +115,29 @@ export const sendOtp = async (req, res, next) => {
         ...(canUseFallback && { otp })
       }
     });
+=======
+    // Generate OTP
+    const otp = String(Math.floor(100000 + Math.random() * 900000));
+
+    // Store OTP
+    otpStore.set(normalizedPhone, {
+      otp,
+      expiresAt: Date.now() + 10 * 60 * 1000
+    });
+
+    // 🔥 ALWAYS fallback (NO TWILIO)
+    console.log(`📲 DEMO OTP for ${normalizedPhone}: ${otp}`);
+
+    res.status(200).json({
+      success: true,
+      message: `OTP generated (demo mode)`,
+      data: {
+        phone: normalizedPhone,
+        otp   // 👈 IMPORTANT: send OTP to frontend
+      }
+    });
+
+>>>>>>> upstream/main
   } catch (error) {
     next(error);
   }

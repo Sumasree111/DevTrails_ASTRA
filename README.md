@@ -1,10 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
 # 🌍 AGESIS AI — Parametric Micro-Insurance Platform
 
 ## 🚀 Overview
 
 AGESIS AI is an autonomous parametric micro-insurance platform designed for gig workers.
 It eliminates manual claim filing by automatically triggering payouts based on real-time environmental conditions such as rainfall, temperature, and air quality.
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main
 The system continuously monitors risk and executes claims without human intervention, ensuring faster, fairer, and more transparent insurance.
 
 ---
@@ -227,6 +234,7 @@ PORT=5000
 AGESIS AI transforms insurance from a reactive process into a proactive, automated safety net for gig workers.
 
 ---
+<<<<<<< HEAD
 =======
 # AI-Powered Parametric Micro-Insurance for Gig Workers
 
@@ -481,3 +489,5 @@ Blockchain-based claim transparency for trust and auditability <br>
 Dynamic pricing models using advanced AI based on real-time risk changes
 
 >>>>>>> 671c324f450dbaca74472b506126a24798046028
+=======
+>>>>>>> upstream/main
